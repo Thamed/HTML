@@ -1,11 +1,11 @@
-@extends('templates.defaultWithBackground')
+@extends('templates.default')
 
-@section('content')
+@section('container-fluid')
 <div class="row">
-    <div class="col-xs-4">
+    <div class="col-lg-2">
     </div>
-            <div class="col-xs-4">
-            <h2 style="color:white"><b>Sign in</b></h3>
+            <div class="col-lg-4">
+            <h2 style=""><b>Sign in</b></h3>
                 <form class="form-vertical"role="form" method="post" action="{{route('auth.signin')}}">
                     <div class="form-group {{$errors->has('email') ? 'has-error': ''}}">
                                 <input type="text" placeholder="E-mail" name="email" class="form-control" id="email">
@@ -19,7 +19,7 @@
                         <span class="help-block">{{ $errors->first('password') }} </span>
                     @endif
                     </div>
-                    <div style="color:white" class="checkbox">
+                    <div class="checkbox">
                         <label>
                             <input type="checkbox" name="remember"> Remember me
                         </label>
@@ -30,7 +30,7 @@
                     <input type="hidden" name="_token" value="{{Session::token()}}">
                 </form>
             </div>
-    <div class="col-xs-4">  
+    <div class="col-lg-4">  
     </div>
 </div>
 @stop

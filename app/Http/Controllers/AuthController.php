@@ -38,7 +38,7 @@ class AuthController extends Controller{
 
        if(!Auth::attempt($request->only(['email','password']), $request->has('remember')))
        {
-           return redirect()->back()->with('info', 'Could not sing you in with those details.');
+           return redirect()->route('home')->with('info', 'Could not sign you in with those details.');
        }
 
         return redirect()->route('home')->with('info', 'You are signed in.');

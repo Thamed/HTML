@@ -7,7 +7,7 @@ class Status extends Model{
     protected $table ='statuses';
 
     protected $fillable= [
-        'body'
+        'body', 'image'
     ];
 
     public function user(){
@@ -20,5 +20,13 @@ class Status extends Model{
 
     public function replies(){
         return $this->hasMany('Gallery\Models\Status', 'parent_id');
+    }
+
+    public function images(){
+        return $this->hasMany('Gallery\Models\Status', 'image');
+    }
+
+    public function likes(){
+        return $this->morphMany('Gallery\Models\Like', 'likeable');
     }
 }

@@ -1,13 +1,13 @@
-@extends('templates.defaultWithBackground')
+@extends('templates.default')
 
-@section('content')
+@section('container-fluid')
 
     <div class="row">
     <div class="col-xs-4">
     </div>
 
         <div   class="col-xs-4">
-        <h2 style="color:white"><b>Sign up</b></h2>
+        <h2><b>Sign up</b></h2>
             <form class="form-vertical" role="form" method="post" action="{{route('auth.signup')}}">
                 <div class="form-group {{$errors->has('email') ? 'has-error': ''}}">
                         <input type="text" placeholder="E-mail" name="email" class="form-control" id="email" value="{{ Request::old('email') ?: ''}}">

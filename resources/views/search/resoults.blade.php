@@ -1,6 +1,6 @@
 @extends('templates.default')
 
-@section('content')
+@section('container-fluid')
     <h3>Your search for "{{Request::input('query') }}" </h3>
 
     <div class="row">

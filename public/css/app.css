@@ -1121,8 +1121,9 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
+  max-width: 33%;
   height: auto;
+  float:left;
 }
 .img-rounded {
   border-radius: 6px;
@@ -1582,8 +1583,6 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1599,7 +1598,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    width: 79%;
+    width: 80%;
   }
 }
 .container-fluid {
@@ -1608,14 +1607,10 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-.row {
-margin-top:15px;
-}
+
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2241,7 +2236,7 @@ margin-top:15px;
     margin-left: 16.66666667%;
   }
   .col-lg-offset-1 {
-    margin-left: 8.33333333%;
+    margin-left: 2%;
   }
   .col-lg-offset-0 {
     margin-left: 0;
@@ -6758,3 +6753,48 @@ button.close {
 .navbar-fixed-left .navbar-nav > li:hover {
     background-color: #333;
 }
+
+.media-mine{
+  width:100%;
+  height:15%;
+  max-height: 400px;
+  background-color:#e74c3c;
+}
+
+.profile{
+    width:100%;
+    background-color:#2c3e50;
+    height:200px;
+    position:relative;
+}
+
+.image{
+    margin: 0;
+    background-color: #fff;
+    position: relative;
+    top: 65%;
+    left: 10%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    float:left;
+}
+.image>img{
+    top:50%;
+    left:50%;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+}
+
+.name{
+    float:left;
+    color:white;
+    font-size:34px;
+    position:relative;
+    top: 70%;
+    left: 20%;
+}
+
